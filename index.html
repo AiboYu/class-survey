@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Survey</title>
+</head>
+<body>
+
+  <canvas id="myChart" width="400" height="200"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const ctx = document.getElementById('myChart')
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Yes,v24 or later',
+          'Yes, an older version or Im not sure',
+          'Not yet'
+        ],
+        datasets: [{
+          label: 'Students',
+          data: [28, 4, 21],
+        }]
+      }
+    })
+  </script>
+
+</body>
+</html>
